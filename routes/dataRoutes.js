@@ -56,8 +56,8 @@ router.delete('/:id', async (req, res) => {
     try{
         const id = req.params.id;
         const data = await DataSchema.findByIdAndDelete(id);
-    console.log('Data deleted');
-    res.status(200).json(data);
+        console.log('Data deleted');
+        res.status(200).json(data);
 
     } catch(err){
         console.log(err, "Error in deleting data");
